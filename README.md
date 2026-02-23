@@ -1,50 +1,52 @@
-PertinaxHeart — MaChérie Hub (Smart Desktop Hub)
+Here is a professional and structured README.md file designed to give Claude Code (and any human contributors) a clear roadmap of the Pertinax Heart project.
+Pertinax Heart 🤎
 
-Short description
-PertinaxHeart (working name: MaChérie Hub) is a small, Wi‑Fi connected desktop device built around an ESP32‑S3 and a 240×240 ST7789 display. It uses LVGL for a modular UI, FreeRTOS for concurrency, and Firebase for simple remote interactions (e.g., a "thinking of you" LED or message).
+An Industrial-Naked IoT Smart Hub & Sentimental Gift
 
-Hardware (summary)
-- MCU: ESP32‑S3
-- Display: ST7789 240×240 SPI
-- Input: Rotary encoder (rotate = scroll/select, click = enter)
-- Sensors: DHT22 (temp/humidity), distance sensor (ToF or ultrasonic)
+Pertinax Heart is a custom-engineered desktop companion built on the ESP32-S3. It merges a raw, "naked" hardware aesthetic—featuring an exposed pertinax circuit board behind transparent plexiglass—with a modern, modular software ecosystem.
+🚀 Overview
 
-Key features
-- Modular LVGL apps: Milestone counter, 13×13 Go, Distance Ruler, Music recommendations
-- Background sensor polling via FreeRTOS tasks with responsive encoder handling
-- Wi‑Fi auto‑connect + Firebase integration (realtime triggers)
-- OTA updates for painless field upgrades
+The project serves as a "Smart Hub" for a partner, featuring remote interaction via Firebase and a suite of "Apps" driven by the LVGL graphics library and FreeRTOS.
+Key Features
 
-Quickstart (PlatformIO)
-1. Install PlatformIO in VS Code.
-2. Open this project folder.
-3. Update `platformio.ini` to match your ESP32‑S3 board and add required `lib_deps` (LVGL, TFT driver, Firebase libs).
-4. Build and upload:
+    "Thinking of You" LED: A remote-triggered indicator synced via Firebase.
 
-```powershell
-pio run -e <your_env> -t upload
-```
+    Modular App Suite: * 13x13 Go Game: A fully playable logic-based board game.
 
-Notes on credentials
-- Put Wi‑Fi and Firebase credentials in `src/config/settings.h` or a separate `src/config/credentials.h` (ignored by git). Never commit credentials to the repo.
+        Digital Ruler: Real-time distance measurements using ultrasonic/laser sensors.
 
-Repository layout (high level)
-- `src/` — application code (apps/, drivers/, tasks/, ui/, config/)
-- `include/` — shared public headers
-- `lib/` — third‑party or reusable local libraries
-- `docs/` — wiring, structure, TODOs
-- `src/assets/` — fonts and images for LVGL (keep optimized)
+        Milestone Counter: Tracks and displays significant relationship dates.
 
-Development tips
-- Reuse your working display, Wi‑Fi, Firebase and OTA code by copying small, well‑isolated modules into `lib/` or `src/config/`.
-- Prioritize encoder responsiveness: run encoder handling at high FreeRTOS priority and keep the ISR short.
-- Reduce LVGL RAM by subsetting fonts and loading large images from SPIFFS / LittleFS when needed.
+        Music Recommender: A dedicated UI for sharing track suggestions.
 
-Tasks & Roadmap
-- See `docs/TODO.md` for the current prioritized task list and milestone plan.
+    Environmental Monitoring: Real-time temperature and humidity tracking via DHT22.
 
-Contact
-If you want me to customise this README further (add wiring images, schematic, or exact `platformio.ini` entries), tell me which section to expand.
+    Industrial Design: 3D-printed enclosure with a visible, hand-soldered pertinax core.
 
-Project name note
-The repository is currently `PertinaxHeart` on GitHub; the device callsign is `MaChérie Hub` (feel free to rename in docs if you prefer another option).
+🛠 Tech Stack
+
+    Microcontroller: ESP32-S3.
+
+    Display: 1.3" ST7789 TFT LCD (240x240).
+
+    Input: Rotary Encoder for menu navigation.
+
+    Sensors: DHT22 (Temp/Humid) and VL53L0X/HC-SR04 (Distance).
+
+    Software: PlatformIO, C++, FreeRTOS, LVGL, and Firebase.
+
+📂 Project Structure
+
+The repository follows a strict separation of concerns to ensure scalability:
+📝 Roadmap & Progress can accesible from TODO.md on docs file
+
+
+🔧 Installation & Setup
+
+    Clone the Repo: git clone <repo-url>
+
+    Environment: Open the project in VS Code with the PlatformIO extension.
+
+    Config: Update src/config/settings.h with your Wi-Fi and Firebase credentials.
+
+    Build: Run pio run -t upload to flash the ESP32-S3.
