@@ -1,18 +1,16 @@
-#include <Arduino.h>
 
-// put function declarations here:
-int myFunction(int, int);
+#include <Arduino.h>
+#include <Arduino_GFX_Library.h>
+#include <lvgl.h>
+#include "ui/ui_manager.h"
 
 void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+    // delegate the low-level initialization to the UI module
+    ui_init();
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-}
-
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
-}
+    // drive LVGL's timer
+    ui_update_current_screen();
+    delay(5);
+} 

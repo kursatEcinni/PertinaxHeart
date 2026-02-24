@@ -1,11 +1,16 @@
 #pragma once
 
+#include <Arduino.h>
+#include <Arduino_GFX_Library.h>
 #include <lvgl.h>
 
-namespace UI {
 
-void init();
-void loop();
-void show_app(const char* app_id);
+// initialize the display & LVGL, create base screens
+void ui_init();
 
-} // namespace UI
+// must be called periodically from the main loop to service LVGL
+void ui_update_current_screen();
+
+// helper actions typically triggered by encoder/button events
+void ui_switch_action();
+void ui_click_action();
