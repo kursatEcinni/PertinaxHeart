@@ -5,7 +5,7 @@
 #include <stdint.h>
 
 #define LV_COLOR_DEPTH          16
-#define LV_COLOR_16_SWAP        1
+#define LV_COLOR_16_SWAP        0
 
 #define LV_HOR_RES_MAX          240
 #define LV_VER_RES_MAX          240
@@ -34,10 +34,16 @@
 
 // Theme
 #define LV_USE_THEME_DEFAULT    1
+#ifndef LV_THEME_DEFAULT_DARK
 #define LV_THEME_DEFAULT_DARK   1
+#endif
 
 // Fonts
 #define LV_FONT_MONTSERRAT_14   1
+#define LV_FONT_MONTSERRAT_24  1  // Medium-Large
+#define LV_FONT_MONTSERRAT_48  1  // Huge
+#define LV_FONT_UNSCII_16      1  // Large Retro Pixel Font (Double the 8)
+#define LV_FONT_UNSCII_8  1
 #define LV_FONT_DEFAULT         &lv_font_montserrat_14
 
 #endif
