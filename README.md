@@ -1,8 +1,3 @@
-Here is a professional and structured README.md file designed to give Claude Code (and any human contributors) a clear roadmap of the Pertinax Heart project.
-Pertinax Heart 🤎
-
-An Industrial-Naked IoT Smart Hub & Sentimental Gift
-
 Pertinax Heart is a custom-engineered desktop companion built on the ESP32-S3. It merges a raw, "naked" hardware aesthetic—featuring an exposed pertinax circuit board behind transparent plexiglass—with a modern, modular software ecosystem.
 🚀 Overview
 
