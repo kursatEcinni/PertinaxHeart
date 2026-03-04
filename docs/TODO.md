@@ -1,10 +1,10 @@
 DeskHub prioritized TODOs
 
 High priority (needed for prototype delivery)
-- [ ] Integrate working display/LVGL driver into `UI::init` and verify framebuffer + lv_timer running
-- [ ] Implement encoder driver: ISR, debouncing, rotary->navigation mapping (rotate=scroll/select, click=enter)
-- [ ] Add Wi‑Fi auto‑connect module (import working code and config)
-- [ ] Add OTA update flow (reuse prior implementation, verify full update cycle)
+- [x] Integrate working display/LVGL driver into `UI::init` and verify framebuffer + lv_timer running
+- [x] Implement encoder driver: ISR, debouncing, rotary->navigation mapping (rotate=scroll/select, click=enter)
+- [x] Add Wi‑Fi auto‑connect module (import working code and config)
+- [-] Add OTA update flow (reuse prior implementation, verify full update cycle)
 
 Core functionality
 - [ ] Implement DHT22 driver and validate temperature/humidity readings

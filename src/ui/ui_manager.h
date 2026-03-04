@@ -26,7 +26,13 @@ extern const lv_font_t lv_font_unscii_8;
 // initialize the display & LVGL, create base screens
 void ui_init();
 
-void ui_set_encoder_value(int value); // Update the encoder value label on the dashboard
+void show_wifi_popup(bool success); // Show a popup indicating WiFi connection status
+
+void ui_set_encoder_value(int value); // Update the slider value on the dashboard
+void ui_set_temperature(float temp); // Update temperature display
+void ui_set_humidity(int humidity); // Update humidity display
+void ui_set_time(const char *time_str); // Update time display
+void ui_set_date(const char *date_str); // Update date display
 
 void create_widget_screen();
 

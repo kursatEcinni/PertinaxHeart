@@ -35,12 +35,15 @@
 // Theme
 #define LV_USE_THEME_DEFAULT    1
 #ifndef LV_THEME_DEFAULT_DARK
-#define LV_THEME_DEFAULT_DARK   1
+#define LV_THEME_DEFAULT_DARK   0
 #endif
 
-// Fonts
-#define LV_FONT_MONTSERRAT_14   1
+#define LV_FONT_MONTSERRAT_14  1
+#define LV_FONT_MONSTERRAT_16  1
+#define LV_FONT_MONTSERRAT_20  1  // Added 20 punto font
 #define LV_FONT_MONTSERRAT_24  1  // Medium-Large
+#define LV_FONT_MONTSERRAT_32  1      
+#define LV_FONT_MONTSERRAT_36  1  // Large
 #define LV_FONT_MONTSERRAT_48  1  // Huge
 #define LV_FONT_UNSCII_16      1  // Large Retro Pixel Font (Double the 8)
 #define LV_FONT_UNSCII_8  1
